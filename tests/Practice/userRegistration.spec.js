@@ -4,11 +4,8 @@ test('user Registration', async({browser})=> {
 
     const context = await browser.newContext();
     const page = await context.newPage();
-
     await page.goto('https://rahulshettyacademy.com/client/#/auth/login');
-
-  await  page.getByText('Register here').click();
-
+    await  page.getByText('Register here').click();
     const fName=page.locator('#firstName');
     const lName=page.getByPlaceholder('Last Name');
     const email=page.getByPlaceholder('email@example.com');
@@ -19,7 +16,6 @@ test('user Registration', async({browser})=> {
     const confpassword = page.locator('#confirmPassword');
     const terms = page.locator('[formcontrolname="required"]');
     const register = page.locator('[name="login"]');
-
     await fName.fill('kannan');
     await lName.fill('Parth');
     await email.fill('kannanpbgr7@gmail.com');
@@ -34,8 +30,4 @@ test('user Registration', async({browser})=> {
     const exptext= await page.locator('h1.headcolor').textContent();
     console.log(exptext);
     expect(exptext).toBe('Account Created Successfully')
-
-
-
-
 })
