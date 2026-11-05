@@ -2,7 +2,12 @@
 # Playwright
 node_modules/
 /test-results/
+/tests/LearnJS
+/tests/LearnPlaywright
+/tests/example.spec.js
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/.auth/
+/.env
